@@ -1,1 +1,1 @@
-# ux-design-cradle
+# rails-eventus
