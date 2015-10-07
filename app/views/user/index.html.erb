@@ -1,0 +1,55 @@
+<html>
+<head>
+	<style>
+	table{
+		border: 1px solid black;
+		padding:0px;
+		background-color: black;
+	}
+	td,th{
+		padding: 5px 10px;
+		margin: 0px;
+		border:1px solid black;
+		background-color: #444444;
+		color: white;
+	}
+	a{
+		color:white;
+	}
+	.new-link{
+
+		color: black;
+	}
+</style>
+</head>
+
+<body>
+
+	
+<h2>Users</h2>
+<%= link_to("Create New User", {:action => 'new'}, :class=> 'new-link') %>
+
+<table>
+	<tr>
+
+		<th>ID</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Email</th>
+		<th>Password</th>
+		<th>Is Teacher</th>
+	</tr>
+	<% @users.each do |user| %>
+		<tr>
+			<td><%= link_to(user.id, {:action => 'show', :id => user.id}) %></td>
+			<td><%= user.first_name %></td>
+			<td><%= user.last_name %></td>
+			<td><%= user.email %></td>
+			<td><%= user.password %></td>
+			<td><%= user.teacher ? 'yes' : 'no' %></td>
+			
+		</tr>
+	<% end %>
+</table>
+</body>
+</html>
