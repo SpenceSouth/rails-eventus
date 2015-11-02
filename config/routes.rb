@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/show'
+
+  get 'settings/show'
+
+  get 'equipment/show'
+
+  get 'events/show'
+
+  get 'dashboard/show'
+
   match ':controller(/:action(/:id))', :via => [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.

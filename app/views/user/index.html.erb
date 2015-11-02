@@ -1,31 +1,3 @@
-<html>
-<head>
-	<style>
-	table{
-		border: 1px solid black;
-		padding:0px;
-		background-color: black;
-	}
-	td,th{
-		padding: 5px 10px;
-		margin: 0px;
-		border:1px solid black;
-		background-color: #444444;
-		color: white;
-	}
-	a{
-		color:white;
-	}
-	.new-link{
-
-		color: black;
-	}
-</style>
-</head>
-
-<body>
-
-	
 <h2>Users</h2>
 <%= link_to("Create New User", {:action => 'new'}, :class=> 'new-link') %>
 
@@ -51,5 +23,3 @@
 		</tr>
 	<% end %>
 </table>
-</body>
-</html>
