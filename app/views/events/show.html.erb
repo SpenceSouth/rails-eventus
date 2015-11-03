@@ -1,2 +1,21 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<%= stylesheet_link_tag    'events', media: 'all', 'data-turbolinks-track' => true %>
+<div class="row">
+	<div id="room-column" class="col-md-3">
+		<div id="room-list-header">
+				<h2>Rooms</h2><button type="button" class="btn btn-default" >
+				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+		</div>
+		<ul id="room-list" class="list-group">
+			<% @rooms.each do |r| %>
+				 <%= link_to r.id.to_s do %>
+				<li class="list-group-item">
+					<%= r.name %>
+				</li>
+				<% end %>
+			<% end %>
+		</ul>
+	</div>
+	<div id="event-colum" class="col-md-9">
+		<h2>Current Room: <%= @currentRoom.name %></h2>
+	</div>
+</div>

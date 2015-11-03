@@ -1,4 +1,7 @@
 class EventsController < ApplicationController
   def show
-  end
+  	@rooms = Room.all
+  	
+  		@currentRoom = Room.find(params[:id])
+  end 
 end
