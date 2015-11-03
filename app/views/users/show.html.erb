@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag    'users', media: 'all', 'data-turbolinks-track' => true %>
+<div class="row">
+	<div id="users-column" class="col-md-3">
+		<div id="users-list-header">
+				<h2>Users</h2><button type="button" class="btn btn-default" >
+				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+		</div>
+		<ul id="users-list" class="list-group">
+			<% @users.each do |u| %>
+				 <%= link_to u.id.to_s do %>
+				<li class="list-group-item">
+					<span class="glyphicon glyphicon-user">
+					<%= u.first_name %>
+				</li>
+				<% end %>
+			<% end %>
+		</ul>
+	</div>
+	<div id="rental-colum" class="col-md-9">
+		<h2>Current User: <%= @currentUser.first_name %></h2>
+	</div>
+</div>

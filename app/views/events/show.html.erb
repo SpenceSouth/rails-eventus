@@ -9,6 +9,7 @@
 			<% @rooms.each do |r| %>
 				 <%= link_to r.id.to_s do %>
 				<li class="list-group-item">
+					<span class="glyphicon glyphicon-book">
 					<%= r.name %>
 				</li>
 				<% end %>

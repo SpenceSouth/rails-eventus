@@ -1,2 +1,22 @@
-<h1>Equipment#show</h1>
-<p>Find me in app/views/equipment/show.html.erb</p>
+<%= stylesheet_link_tag    'equipment', media: 'all', 'data-turbolinks-track' => true %>
+<div class="row">
+	<div id="equipment-column" class="col-md-3">
+		<div id="equipment-list-header">
+				<h2>Equipment</h2><button type="button" class="btn btn-default" >
+				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+		</div>
+		<ul id="equipment-list" class="list-group">
+			<% @equipment.each do |e| %>
+				 <%= link_to e.id.to_s do %>
+				<li class="list-group-item">
+					<span class="glyphicon glyphicon-wrench">
+					<%= e.name %>
+				</li>
+				<% end %>
+			<% end %>
+		</ul>
+	</div>
+	<div id="rental-colum" class="col-md-9">
+		<h2>Current Equipment: <%= @currentEquipment.name %></h2>
+	</div>
+</div>

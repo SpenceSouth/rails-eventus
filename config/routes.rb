@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'requests/show'
+
+  get 'users/show'
+
   get 'sessions/new'
 
   get 'sessions/show'
