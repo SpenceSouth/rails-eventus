@@ -7,6 +7,7 @@ class CreateEvents < ActiveRecord::Migration
     	t.integer "user_id", :nulll => false
     	t.text "description", :limit => 200
     	t.integer "room_id", :null => false
+      t.boolean "pending_approval", :default => true
       t.timestamps null: false
     end
   end

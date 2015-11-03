@@ -24,23 +24,25 @@ ActiveRecord::Schema.define(version: 20151006172950) do
   create_table "events", force: :cascade do |t|
     t.datetime "start_time"
     t.datetime "end_time"
-    t.string   "name",                    null: false
+    t.string   "name",                                        null: false
     t.integer  "user_id"
-    t.text     "description", limit: 200
-    t.integer  "room_id",                 null: false
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.text     "description",      limit: 200
+    t.integer  "room_id",                                     null: false
+    t.boolean  "pending_approval",             default: true
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
   end
 
   create_table "rentals", force: :cascade do |t|
     t.datetime "start_time"
     t.datetime "end_time"
-    t.string   "name",                     null: false
+    t.string   "name",                                        null: false
     t.integer  "user_id"
-    t.text     "description",  limit: 200
-    t.integer  "equipment_id",             null: false
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.text     "description",      limit: 200
+    t.integer  "equipment_id",                                null: false
+    t.boolean  "pending_approval",             default: true
+    t.datetime "created_at",                                  null: false
+    t.datetime "updated_at",                                  null: false
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -57,14 +59,12 @@ ActiveRecord::Schema.define(version: 20151006172950) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "first_name", limit: 50
-    t.string   "last_name",  limit: 50
-    t.string   "image_url"
-    t.boolean  "teacher",               default: false
-    t.string   "password",   limit: 40
-    t.string   "email",      limit: 40
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.string  "first_name", limit: 50,                 null: false
+    t.string  "last_name",  limit: 50,                 null: false
+    t.string  "image_url"
+    t.boolean "teacher",               default: false
+    t.string  "password",   limit: 40,                 null: false
+    t.string  "email",      limit: 40,                 null: false
   end
 
 end

@@ -18,5 +18,19 @@
 	</div>
 	<div id="event-colum" class="col-md-9">
 		<h2>Current Room: <%= @currentRoom.name %></h2>
+		
+		<ul>
+			<lh>Approved Events for room</lh>
+			<% @events.each do |e| %>
+				<li><%= e.name %>
+			<% end %>
+		</ul>
+
+		<ul>
+			<lh>Events pending approval</lh>
+			<% @pendingEvents.each do |e| %>
+				<li><%= e.name %>
+			<% end %>
+		</ul>
 	</div>
 </div>
