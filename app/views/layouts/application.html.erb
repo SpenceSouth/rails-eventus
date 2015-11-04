@@ -9,33 +9,35 @@
 <body class ="container">
   <div class= "row" id = "page-row">
       <div class ="col-md-3" id="navigation">
-        <h1> Eventus</h1>
-        <div class = "navigation-option current">
+        <%= link_to '/dashboard/show' do %>
+          <h1> Eventus</h1>
+        <% end %>
+        <div class = "navigation-option" id="dashboard-select">
           <%= link_to '/dashboard/show' do %>
             <span class="glyphicon glyphicon-home"></span><p>Dashboard</p>
           <% end %>
         </div>
-        <div class = "navigation-option">
+        <div class = "navigation-option" id="events-select">
           <%= link_to '/events/show/1' do %>
             <span class="glyphicon glyphicon-book"></span><p>Rooms/Events</p>
           <% end %>
         </div>
-        <div class = "navigation-option">
+        <div class = "navigation-option" id="equipment-select">
           <%= link_to '/equipment/show/1' do %>
             <span class="glyphicon glyphicon-wrench"></span><p>Equipment</p>
           <% end %>
         </div>
-        <div class = "navigation-option">         
+        <div class = "navigation-option" id="users-select">         
           <%= link_to '/users/show/1' do %>
             <span class="glyphicon glyphicon-user"></span><p>Users</p>
           <% end %>
         </div>
-        <div class = "navigation-option">         
+        <div class = "navigation-option" id="requests-select">         
           <%= link_to '/requests/show' do %>
             <span class="glyphicon glyphicon-envelope"></span><p>Requests</p>
           <% end %>
         </div>
-        <div class = "navigation-option">         
+        <div class = "navigation-option" id="settings-select">         
           <%= link_to '/settings/show' do %>
             <span class="glyphicon glyphicon-asterisk"></span><p>Settings</p>
           <% end %>

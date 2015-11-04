@@ -12,3 +12,13 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( events.css )
 Rails.application.config.assets.precompile += %w( equipment.css )
 Rails.application.config.assets.precompile += %w( users.css )
+Rails.application.config.assets.precompile += %w( dashboard.css )
+
+Rails.application.config.assets.precompile += %w( requests.css )
+
+Rails.application.config.assets.precompile += %w( dashboard.js )
+Rails.application.config.assets.precompile += %w( equipment.js )
+Rails.application.config.assets.precompile += %w( events.js )
+Rails.application.config.assets.precompile += %w( requests.js )
+Rails.application.config.assets.precompile += %w( settings.js )
+Rails.application.config.assets.precompile += %w( users.js )

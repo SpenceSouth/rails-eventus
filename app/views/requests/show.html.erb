@@ -1,2 +1,24 @@
-<h1>Requests#show</h1>
-<p>Find me in app/views/requests/show.html.erb</p>
+<%= stylesheet_link_tag    'requests', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'requests', 'data-turbolinks-track' => true %>
+
+<div class="row">
+	<div id="requests-column" class="col-md-3">
+		<div id="requests-list-header">
+				<h2>Requests</h2><button type="button" class="btn btn-default" >
+				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+		</div>
+		<ul id="requests-list" class="list-group">
+			<% @eventRequests.each do |r| %>
+				 <%= link_to r.id.to_s do %>
+				<li class="list-group-item">
+					<span class="glyphicon glyphicon-book">
+					<%= r.name %>
+				</li>
+				<% end %>
+			<% end %>
+		</ul>
+	</div>
+	<div id="event-colum" class="col-md-9">
+
+	</div>
+</div>
