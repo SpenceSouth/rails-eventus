@@ -9,7 +9,9 @@
 <body class ="container">
   <div class= "row" id = "page-row">
       <div class ="col-md-3" id="navigation">
-        <h1> Eventus</h1>
+          <%= link_to '/dashboard/show' do %>
+            <h1> Eventus</h1>
+          <% end %>
         <div class = "navigation-option current">
           <%= link_to '/dashboard/show' do %>
             <span class="glyphicon glyphicon-home"></span><p>Dashboard</p>
