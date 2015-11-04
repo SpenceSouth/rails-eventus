@@ -1,1 +1,17 @@
+<<<<<<< HEAD
 <%= javascript_include_tag 'dashboard', 'data-turbolinks-track' => true %>
+=======
+<%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
+<div class="row">
+	<div id="slide-panel" class="col-md-12">
+		<hr />
+		<div id="slide-panel-content">
+			<% @events.each do |e| %>
+				<div class="user-photo"></div>
+			<% end %>
+		</div>
+		<hr />
+	</div>
+	
+</div>
+>>>>>>> 4da63a86702f53fc989503898f920d3f8308e727
