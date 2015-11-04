@@ -1,2 +1,13 @@
-<h1>Dashboard#show</h1>
-<p>Find me in app/views/dashboard/show.html.erb</p>
+<%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
+<div class="row">
+	<div id="slide-panel" class="col-md-12">
+		<hr />
+		<div id="slide-panel-content">
+			<% @events.each do |e| %>
+				<div class="user-photo"></div>
+			<% end %>
+		</div>
+		<hr />
+	</div>
+	
+</div>
