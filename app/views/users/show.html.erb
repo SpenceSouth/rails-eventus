@@ -4,7 +4,8 @@
 <div class="row">
 	<div id="users-column" class="col-md-3">
 		<div id="users-list-header">
-				<h2>Users</h2><button type="button" class="btn btn-default" >
+				<h2>Users</h2>
+				<button id="add-room-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"/>
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
 		</div>
 		<ul id="users-list" class="list-group">
@@ -21,4 +22,88 @@
 	<div id="rental-colum" class="col-md-9">
 		<h2>Current User: <%= @currentUser.first_name %></h2>
 	</div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">User Management</h4>
+      </div>
+      <div class="modal-body">
+
+				<div class="row user-row">
+					<div class="user-photo"></div>
+					<p class ="user-name">Spence Southard</p>
+					<select class="user-class">
+					  <option value="admin">Admin</option>
+					  <option value="elevated">Elevated</option>
+					  <option value="basic">Basic</option>
+					</select>
+					<div class="user-buttons">
+						<button class="btn user-btn">Block</button>
+						<button class="btn btn-danger user-btn">Remove</button>
+					</div>
+					<hr>
+				</div>
+
+					<div class="row user-row">
+						<div class="user-photo"></div>
+						<p class ="user-name">Ramsey Crow</p>
+						<select class="user-class">
+						  <option value="admin">Admin</option>
+						  <option value="elevated">Elevated</option>
+						  <option value="basic">Basic</option>
+						</select>
+						<div class="user-buttons">
+							<button class="btn user-btn">Block</button>
+							<button class="btn btn-danger user-btn">Remove</button>
+						</div>
+						<hr>
+					</div>
+
+					<div class="row user-row">
+						<div class="user-photo"></div>
+						<p class ="user-name">Brian Sharp</p>
+						<select class="user-class">
+						  <option value="admin">Admin</option>
+						  <option value="elevated">Elevated</option>
+						  <option value="basic">Basic</option>
+						</select>
+						<div class="user-buttons">
+							<button class="btn user-btn">Block</button>
+							<button class="btn btn-danger user-btn">Remove</button>
+						</div>
+						<hr>
+					</div>
+
+					<div class="row user-row">
+						<div class="user-photo"></div>
+						<input class="user-name" type="text" placeholder="User Name">
+						<select class="user-class">
+						  <option value="admin">Admin</option>
+						  <option value="elevated">Elevated</option>
+						  <option value="basic">Basic</option>
+						</select>
+						<input class="user-name" type="text" placeholder="Email">
+						<div class="user-buttons">
+							<button class="btn btn-primary">Add</button>
+						</div>
+						<hr>
+					</div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<!-- Remove data-dismiss="model" to actually save -->
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
 </div>

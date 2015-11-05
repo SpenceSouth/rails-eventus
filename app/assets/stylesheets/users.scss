@@ -1,3 +1,39 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-name {
+  color: black;
+  display: inline-block;
+  padding-left: 15px;
+}
+
+
+.user-photo{
+    border-radius: 50%;
+    behavior: url(PIE.htc);
+    background-color: #555555;
+    height: 35px;
+    width: 35px;
+    margin: 0px;
+    vertical-align: middle;
+    display: inline-block;
+    top: 5px;
+}
+
+.user-row {
+  width: 100%;
+  padding-left: 25px;
+}
+
+.user-class {
+  padding-left: 15px;
+}
+
+.user-buttons {
+  float: right;
+}
+
+.user-btn {
+  margin-right: 5px;
+}
