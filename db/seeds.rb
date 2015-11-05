@@ -15,9 +15,9 @@
 	User.create(first_name: 'Ramsey', last_name: 'Crowe', email: 'test@test.com', password: '1234')
 
 	#Create the Rooms
-	Room.create(name: "Room 1")
-	Room.create(name: "Room 2")
-	Room.create(name: "Room 3")
+	Room.create(name: "Room 1",maximum_size: 50, description: "Room number one offers students a very comfortable learning environment.")
+	Room.create(name: "Room 2",maximum_size: 100, description: "A large auditorium on the second floor.")
+	Room.create(name: "Room 3",maximum_size: 25, description: "A very small classroom that only fits 25 students. Once a linon closet converted to a fully function, sauna like classroom")
 
 	#Create the Equipment
 	Equipment.create(name: "Computer 1")

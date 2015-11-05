@@ -22,11 +22,12 @@
 	<div id="event-colum" class="col-md-9">
 		<h2 id="room-title">Current Room: <%= @currentRoom.name %></h2>
 		<div id ="room-description">
-			Months on ye at by esteem desire warmth former. Sure that that way gave any fond now. His boy middleton sir nor engrossed affection excellent. Dissimilar compliment cultivated preference eat sufficient may. Well next door soon we mr he four. Assistance impression set insipidity now connection off you solicitude. Under as seems we me stuff those style at. Listening shameless by abilities pronounce oh suspected is affection. Next it draw in draw much bred. 
-
+			<span class="descriptor">Description: </span>
+			<%= @currentRoom.description %>
 		</div>
 		<div id="room-size">
-			Maximum Size: 20 student
+			<span class="descriptor">Maximum Size: </span>
+				<%= @currentRoom.maximum_size %>
 		</div>
 		<div id="current-and-upcoming-events" class="panel panel-default">
 			<div class="panel-heading">
@@ -39,16 +40,22 @@
 						<%= e.name %>
 					</li>
 				<% end %>
-			</div>
-
+			</ul>
 		</div>
+
 		<div id="add-event-fab" class="row">
 			<div class="col-md-9"></div>
-			<div class="col-md-3"><span class="glyphicon glyphicon-plus-sign"></span></div>
+			<div class="col-md-3">
+				Add Event
+				<button type ="button" id="add-event-button" class="btn btn-default">
+					<span class="glyphicon glyphicon-plus"></span>
+				</button>
+			</div>
 			
 		</div>
-
 	</div>
+
+	
 </div>
 
 

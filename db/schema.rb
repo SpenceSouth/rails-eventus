@@ -46,11 +46,12 @@ ActiveRecord::Schema.define(version: 20151006172950) do
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.string   "name",        limit: 30
-    t.text     "description", limit: 200
+    t.string   "name",         limit: 30
+    t.text     "description",  limit: 200
     t.integer  "event_id"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.integer  "maximum_size",             default: 50
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
   end
 
   create_table "settings", force: :cascade do |t|

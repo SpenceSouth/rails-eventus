@@ -35,7 +35,17 @@
 	display:inline;
 
 }
+#room-size{
+	margin: 20px 10px;
+}
+#room-description{
 
+	margin: 20px 10px;	
+}
+.descriptor{
+	color: #11CFFF;
+
+}
 /* Current and Upcoming Events */
 #current-and-upcoming-events{
 	background-color: #00BFFF;
@@ -50,6 +60,9 @@
 	.panel-body{
 		border-width: 0px;
 	}
+	.list-group-item:first{
+		border-top: 0px;
+	}
 	.event-image{
 		height: 65px;
 		width: 65px;
@@ -58,8 +71,14 @@
 		border: 1px solid #00BFFF;
 	}
 }
-#add-event-fab{
-	color: #00BFFF;
+#add-event-button{
+	display:inline;
+	background-color: #00BFFF;
+	border-width: 0px;	
+	.glyphicon{
+		background-color: #00BFFF;
+		color: white;
+	}
 }
 
 
