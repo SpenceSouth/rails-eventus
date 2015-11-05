@@ -24,8 +24,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0'
 gem 'simple_form'
 gem 'rails-footnotes', '>= 3.7.9'
-gem 'bootstrap-sass', '~> 3.2.0.2'
-gem "font-awesome-rails"
+gem 'bootstrap-sass', '3.3.5.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
