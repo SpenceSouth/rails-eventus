@@ -4,7 +4,7 @@
 <div class="row">
 	<div id="room-column" class="col-md-3">
 		<div id="room-list-header">
-				<h2>Rooms</h2><button type="button" class="btn btn-default" >
+				<h2>Rooms</h2><button id="add-room-button"  type="button" class="btn btn-default" >
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
 		</div>
 		<ul id="room-list" class="list-group">
@@ -20,7 +20,7 @@
 	</div>
 	<div id="event-colum" class="col-md-9">
 		<h2>Current Room: <%= @currentRoom.name %></h2>
-		
+
 		<ul>
 			<lh>Approved Events for room</lh>
 			<% @events.each do |e| %>
