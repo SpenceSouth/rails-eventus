@@ -36,6 +36,33 @@
 
 }
 
+/* Current and Upcoming Events */
+#current-and-upcoming-events{
+	background-color: #00BFFF;
+	border: 1px solid #00BFFF;
+
+	margin-top: 10px;
+	.panel-heading{
+		background-color: #00BFFF;
+		font-size: 18px;
+
+	}
+	.panel-body{
+		border-width: 0px;
+	}
+	.event-image{
+		height: 65px;
+		width: 65px;
+		background-color: #555555;
+		margin: 5px;
+		border: 1px solid #00BFFF;
+	}
+}
+#add-event-fab{
+	color: #00BFFF;
+}
+
+
 /* Modal */
 .modal-title {
 	color: black;

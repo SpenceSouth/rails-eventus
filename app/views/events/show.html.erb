@@ -20,21 +20,34 @@
 		</ul>
 	</div>
 	<div id="event-colum" class="col-md-9">
-		<h2>Current Room: <%= @currentRoom.name %></h2>
+		<h2 id="room-title">Current Room: <%= @currentRoom.name %></h2>
+		<div id ="room-description">
+			Months on ye at by esteem desire warmth former. Sure that that way gave any fond now. His boy middleton sir nor engrossed affection excellent. Dissimilar compliment cultivated preference eat sufficient may. Well next door soon we mr he four. Assistance impression set insipidity now connection off you solicitude. Under as seems we me stuff those style at. Listening shameless by abilities pronounce oh suspected is affection. Next it draw in draw much bred. 
 
-		<ul>
-			<lh>Approved Events for room</lh>
-			<% @events.each do |e| %>
-				<li><%= e.name %>
-			<% end %>
-		</ul>
+		</div>
+		<div id="room-size">
+			Maximum Size: 20 student
+		</div>
+		<div id="current-and-upcoming-events" class="panel panel-default">
+			<div class="panel-heading">
+				Current and Upcoming events
+			</div>
+			<ul class="list-group">
+				<% @events.each do |e| %>
+					<li class="list-group-item">
+						<img class="img-circle event-image"></img>
+						<%= e.name %>
+					</li>
+				<% end %>
+			</div>
 
-		<ul>
-			<lh>Events pending approval</lh>
-			<% @pendingEvents.each do |e| %>
-				<li><%= e.name %>
-			<% end %>
-		</ul>
+		</div>
+		<div id="add-event-fab" class="row">
+			<div class="col-md-9"></div>
+			<div class="col-md-3"><span class="glyphicon glyphicon-plus-sign"></span></div>
+			
+		</div>
+
 	</div>
 </div>
 
