@@ -3,11 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #slide-panel-content{
-	height:200px
-
+	height: 140px;
 }
+
 .event-panel-user-photo{
-	border-radius: 50%;
+		border-radius: 50%;
     behavior: url(PIE.htc);
     background-color: #555555;
     height: 75px;
@@ -18,12 +18,17 @@
 
 .event-panel{
 	width:250px;
-	top: 100px;
+	top: 40px;
 	left: 20px;
 	position: absolute;
 }
 
-.master-panel {
-	max-width: 500px;
-	overflow-x: scroll;
+.container-outer {
+	overflow: scroll;
+	width: 100%;
+	height: auto;
+}
+
+.container-inner {
+	width: auto;
 }

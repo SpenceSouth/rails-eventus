@@ -2,11 +2,11 @@
 
 <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
 <div class="row">
-	<div id="slide-panel" class="col-md-12">
+	<h3>Upcoming Events Quickview</h3>
+	<div id="slide-panel" class="col-md-12 container-outer">
 		<hr />
-			<div id="slide-panel-content">
-				<h3>Upcoming Events Quickview</h3>
-				<div class="master-panel">
+			<div id="slide-panel-content" class="container-inner">
+				
 					<% @events.each do |e| %>
 						<div class="panel panel-default event-panel">
 							<div class="panel-heading">Event - <%= e.name %></div>
@@ -15,7 +15,6 @@
 							</div>
 						</div>
 					<% end %>
-				</div>
 
 			</div>
 		<hr />
