@@ -47,18 +47,20 @@
 
           <li class="list-group-item">
             <select class="form-control">
+
               <option disabled selected>Choose a Request</option>
-              <option>Request 1</option>
-              <option>Request 2</option>
-              <option>Request 3</option>
+              <option>Create Event</option>
+              <option>Rent Equipment</option>
             </select>
           </li>
           <li class="list-group-item">
             <select class="form-control">
               <option disabled selected>Select a User</option>
-              <option>User 1</option>
-              <option>User 2</option>
-              <option>User 3</option>
+              <% @users.each do |u| %>
+                <option>
+                <%= u.first_name  + " " + u.last_name %>
+              </option>
+              <% end %>
             </select>
           </li>
           <li class="list-group-item">
@@ -66,7 +68,7 @@
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-addon">From: </div>
-                  <input text="text" class="form-control datepicker">
+                  <input text="text" class="form-control datepicker" />
                   <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
                 </div>
               </div>
@@ -77,7 +79,7 @@
               <div class="form-group">
                 <div class="input-group">
                   <div class="input-group-addon">To: </div>
-                  <input text="text" class="form-control datepicker">
+                  <input text="text" class="form-control datepicker" />
                   <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
                 </div>
               </div>
@@ -96,6 +98,7 @@
               </div>
             </div>
           </li>
+
         </form>
       </div>
       <div class = "col-md-9" id="main-content"><%= yield %></div>

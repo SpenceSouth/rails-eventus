@@ -9,11 +9,17 @@ function initEventPanel(){
 }
 
 $(document).ready(function(){
-
+	//create navigation
 	$("#dashboard-select").addClass("current");
 
 	initEventPanel();
 
+	//for quickadd
+	$(".datepicker").datepicker({
+
+		changeMonth: true,
+		changeYear:true
+	});
 
 
 });

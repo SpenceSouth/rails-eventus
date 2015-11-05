@@ -15,7 +15,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery-ui
+
 $(document).ready(function(){
-	$(".datepicker").datepicker();
+	$(".datepicker").datepicker({
+
+		changeMonth: true,
+		changeYear:true
+	});
 
 });
