@@ -5,7 +5,7 @@
 	<div id="users-column" class="col-md-3">
 		<div id="users-list-header">
 				<h2>Users</h2>
-				<button id="add-room-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"/>
+				<button id="add-users-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"/>
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
 		</div>
 		<ul id="users-list" class="list-group">
@@ -23,10 +23,6 @@
 		<h2>Current User: <%= @currentUser.first_name %></h2>
 	</div>
 </div>
-
-
-
-
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
