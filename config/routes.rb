@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'landing/login'
+
   get 'requests/show'
 
   get 'users/show'
@@ -17,7 +19,7 @@ Rails.application.routes.draw do
 
   match ':controller(/:action(/:id))', :via => [:get, :post]
 
-  root 'dashboard#show'
+  root 'landing#login'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

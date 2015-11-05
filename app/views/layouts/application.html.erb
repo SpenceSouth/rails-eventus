@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login</title>
+  <title>Eventus</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
@@ -27,17 +27,17 @@
             <span class="glyphicon glyphicon-wrench"></span><p>Equipment</p>
           <% end %>
         </div>
-        <div class = "navigation-option" id="users-select">         
+        <div class = "navigation-option" id="users-select">
           <%= link_to '/users/show/1' do %>
             <span class="glyphicon glyphicon-user"></span><p>Users</p>
           <% end %>
         </div>
-        <div class = "navigation-option" id="requests-select">         
+        <div class = "navigation-option" id="requests-select">
           <%= link_to '/requests/show' do %>
             <span class="glyphicon glyphicon-envelope"></span><p>Requests</p>
           <% end %>
         </div>
-        <div class = "navigation-option" id="settings-select">         
+        <div class = "navigation-option" id="settings-select">
           <%= link_to '/settings/show' do %>
             <span class="glyphicon glyphicon-asterisk"></span><p>Settings</p>
           <% end %>

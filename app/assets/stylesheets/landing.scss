@@ -1,0 +1,29 @@
+// Place all the styles related to the Landing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+   background-color: #333333;
+ }
+
+.container {
+	width:350px;
+	height:250px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-100px 0 0 -150px;
+}
+
+.login {
+  border-style: solid;
+  border-radius: 25px;
+  text-align: center;
+  background: white;
+}
+
+.login-help {
+  text-align: center;
+}
