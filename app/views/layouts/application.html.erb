@@ -42,6 +42,61 @@
             <span class="glyphicon glyphicon-asterisk"></span><p>Settings</p>
           <% end %>
         </div>
+        <ul id="quick-add" class="list-group">
+          <h2 id="quick-add-title" class="list-group-item">Quick Add </h2>
+
+          <li class="list-group-item">
+            <select class="form-control">
+              <option disabled selected>Choose a Request</option>
+              <option>Request 1</option>
+              <option>Request 2</option>
+              <option>Request 3</option>
+            </select>
+          </li>
+          <li class="list-group-item">
+            <select class="form-control">
+              <option disabled selected>Select a User</option>
+              <option>User 1</option>
+              <option>User 2</option>
+              <option>User 3</option>
+            </select>
+          </li>
+          <li class="list-group-item">
+            <div class="form-inline">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon">From: </div>
+                  <input text="text" class="form-control datepicker">
+                  <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="form-inline">
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-addon">To: </div>
+                  <input text="text" class="form-control datepicker">
+                  <div class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div class="form-inline">
+              <div class="form-group">
+                <div class="input-group">
+
+                  <button type="button" class="btn btn-default btn-lg btn-block">
+                    Add <span class="glyphicon glyphicon-plus-sign"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </form>
       </div>
       <div class = "col-md-9" id="main-content"><%= yield %></div>
   </div>

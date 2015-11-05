@@ -9,7 +9,7 @@
  * compiled file so the styles you add here take precedence over styles defined in any styles
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
- *
+ *= require jquery-ui
  */
  @import "bootstrap/mixins";
  @import "bootstrap-sprockets";
@@ -60,4 +60,45 @@
     }
     .current a{
       color:black;
+    }
+
+    .list-group-item{
+    	background-color: #333333;
+    	border: 1px solid #555555;
+    	padding: 1px;
+    }
+    #quick-add h2{
+    	color: #888888;
+    	text-align: center;
+    }
+    #quick-add select{
+    	background-color: #333333;
+    	border-width: 0px;
+    	color: white;
+    }
+   #quick-add  .input-group{
+    }
+    #quick-add .input-group-addon{
+    	border-width: 0px;
+    	background-color: #333333;
+    	color: white;
+    }
+    #quick-add .glyphicon-calendar{
+    	color: #00BFFF;
+
+    }
+    #quick-add .form-control{
+    	background-color: #333333;
+    	border-width: 0px;
+    	text-align: right;
+    }
+    #quick-add button{
+    	background-color: #333333;
+    	color: #00BFFF;
+    	border-width: 0px;
+    	display: block;
+    	width: 100%;
+    }
+    #quick-add button:hover{
+    	background-color: #555555;
     }
