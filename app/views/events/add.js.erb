@@ -1,2 +1,5 @@
-$("#add-room-button").html("<%= escape_javascript(render 'add') %>")
-$("#add-room-button").modal("show")
+
+function display_model() {
+  $("#add-room-button").html("<%= escape_javascript(render 'add') %>")
+  $("#add-room-button").modal("show")
+}
