@@ -15,35 +15,35 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+
  body{
       background-color: #333333;
       color: white;
     }
-    h1{
-      color:#888888;
-
-    }
-    a,a:hover,a:visited{
-      color:#CCCCCC;
-      text-decoration: none;
-    }
+#page-row{
+      height:100vh;
+}
+/* Navigation CSS */
+    #navigation{
+      h1{
+          color:#888888;
+      }
+      a,a:hover,a:visited{
+        color:#CCCCCC;
+        text-decoration: none;
+      }
     .container{
       height:100%;
       margin:0px;
     }
-    #page-row{
-      height:100%;
-    }
-    #navigation{
-      margin-left:0;
-      height: 100vh;
-    }
+    
+    
     .navigation-option{
       width:100%;
       padding: 10px 20px;
       margin-top: 10px;
       -moz-border-radius: 7px 7px 7px 7px;
-    -webkit-border-radius: 7px 7px 7px 7px;
+      -webkit-border-radius: 7px 7px 7px 7px;
     }
     .navigation-option:hover{
       background-color: #666666;
@@ -63,58 +63,64 @@
     }
 
     .list-group-item{
-    	background-color: #333333;
-    	border: 1px solid #555555;
-    	padding: 1px;
+      background-color: #333333;
+      border: 1px solid #555555;
+      padding: 1px;
     }
     #quick-add h2{
-    	color: #888888;
-    	text-align: center;
+      color: #888888;
+      text-align: center;
     }
     #quick-add select{
-    	background-color: #333333;
-    	border-width: 0px;
-    	color: white;
+      background-color: #333333;
+      border-width: 0px;
+      color: white;
     }
    #quick-add  .input-group{
     }
     #quick-add .input-group-addon{
-    	border-width: 0px;
-    	background-color: #333333;
-    	color: white;
+      border-width: 0px;
+      background-color: #333333;
+      color: white;
     }
     #quick-add .glyphicon-calendar{
-    	color: #00BFFF;
+      color: #00BFFF;
 
     }
     #quick-add .form-control{
-    	background-color: #333333;
-    	border-width: 0px;
-    	text-align: right;
+      background-color: #333333;
+      border-width: 0px;
+      text-align: right;
     }
     #quick-add button{
-    	background-color: #333333;
-    	color: #00BFFF;
-    	border-width: 0px;
-    	display: block;
-    	width: 100%;
+      background-color: #333333;
+      color: #00BFFF;
+      border-width: 0px;
+      display: block;
+      width: 100%;
     }
     #quick-add button:hover{
-    	background-color: #555555;
+      background-color: #555555;
     }
+  }
 
 
 /* Second Column Navigation */
     .custom-list-column{
       background-color: #555555;
-      height: 700vh;
+      height: 100vh;
+
+
+      a,a:hover,a:visited{
+        color:#CCCCCC;
+        text-decoration: none;
+      }
     }
 
     .custom-list-header{
       padding: 10px;
       h2{
         display: inline;
-
 
       }
       button{
@@ -128,12 +134,17 @@
 
     }
     .custom-list-item{
+      border-width: 0px;
       padding: 10px 5px;
+      background-color:#333333;
 
       .glyphicon{
         color: #00BFFF;
         margin-right: 10px;
       }
+    }
+    .custom-list-item:hover{
+      background-color:#444444;
     }
 
 

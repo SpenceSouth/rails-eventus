@@ -8,30 +8,40 @@
 </head>
 <body class ="container">
   <div class= "row" id = "page-row">
+
+      <!-- Begin Navigation -->
       <div class ="col-md-3" id="navigation">
+        
+        <!-- eventus title -->
         <%= link_to '/dashboard/show' do %>
           <h1> Eventus</h1>
         <% end %>
+        
+        <!-- begin Navigation items -->
         <div class = "navigation-option" id="dashboard-select">
           <%= link_to '/dashboard/show' do %>
             <span class="glyphicon glyphicon-home"></span><p>Dashboard</p>
           <% end %>
         </div>
+
         <div class = "navigation-option" id="events-select">
           <%= link_to '/events/show/1' do %>
             <span class="glyphicon glyphicon-book"></span><p>Rooms/Events</p>
           <% end %>
         </div>
+
         <div class = "navigation-option" id="equipment-select">
           <%= link_to '/equipment/show/1' do %>
             <span class="glyphicon glyphicon-wrench"></span><p>Equipment</p>
           <% end %>
         </div>
+
         <div class = "navigation-option" id="users-select">
           <%= link_to '/users/show/1' do %>
             <span class="glyphicon glyphicon-user"></span><p>Users</p>
           <% end %>
         </div>
+
         <div class = "navigation-option" id="requests-select">
           <%= link_to '/requests/show' do %>
             <span class="glyphicon glyphicon-envelope"></span><p>Requests</p>
@@ -42,6 +52,8 @@
             <span class="glyphicon glyphicon-asterisk"></span><p>Settings</p>
           <% end %>
         </div>
+
+        <!-- quick add -->
         <ul id="quick-add" class="list-group">
           <h2 id="quick-add-title" class="list-group-item">Quick Add </h2>
 
@@ -99,8 +111,10 @@
             </div>
           </li>
 
-        </form>
+        </ul>
       </div>
+
+
       <div class = "col-md-9" id="main-content"><%= yield %></div>
   </div>
 
