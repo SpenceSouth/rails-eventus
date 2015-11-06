@@ -2,23 +2,27 @@
 <%= javascript_include_tag 'requests', 'data-turbolinks-track' => true %>
 
 <div class="row">
-	<div id="requests-column" class="col-md-3">
-		<div id="requests-list-header">
+
+	<!-- second column listing - use custom-list in application.css.scc for style -->
+	<div id="requests-column" class="col-md-3 custom-list-column">
+		<div id="requests-list-header" class="custom-list-header">
 				<h2>Requests</h2>
 				<button id="add-request-button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"/>
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
 		</div>
-		<ul id="requests-list" class="list-group">
+		<ul id="requests-list" class="list-group custom-list-listing">
 			<% @eventRequests.each do |r| %>
 				 <%= link_to r.id.to_s do %>
-				<li class="list-group-item">
+				<li class="list-group-item custom-list-item">
 					<span class="glyphicon glyphicon-book">
 					<%= r.name %>
 				</li>
 				<% end %>
 			<% end %>
 		</ul>
-	</div>
+	</div><!-- end second column listing -->
+
+	<!-- begin third column listing -->
 	<div id="event-colum" class="col-md-9">
 
 	</div>

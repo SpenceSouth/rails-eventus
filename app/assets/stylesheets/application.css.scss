@@ -36,7 +36,7 @@
     }
     #navigation{
       margin-left:0;
-      height: 100%;
+      height: 100vh;
     }
     .navigation-option{
       width:100%;
@@ -104,8 +104,26 @@
     }
 
 
+/* Second Column Navigation */
+    .custom-list-column{
+      background-color: #555555;
+      height: 700vh;
+    }
 
-    /* Modal */
+    .custom-list-header{
+
+
+    }
+    .custon-list-listing{
+
+
+    }
+    .custom-list-item{
+
+    }
+
+
+/* Modal */
     .modal-title {
     	color: black;
     }
