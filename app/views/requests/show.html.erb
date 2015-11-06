@@ -11,10 +11,14 @@
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
 		</div>
 		<ul id="requests-list" class="list-group custom-list-listing">
-			<% @eventRequests.each do |r| %>
+			<% @getSortedRequests.each do |r| %>
 				 <%= link_to r.id.to_s do %>
 				<li class="list-group-item custom-list-item">
-					<span class="glyphicon glyphicon-book"></span>
+					<% if r.instance_of? Event %>
+						<span class="glyphicon glyphicon-book"></span>
+					<% else %>
+						<span class="glyphicon glyphicon-wrench"></span>
+					<% end %>
 					<%= r.name %>
 				</li>
 				<% end %>
