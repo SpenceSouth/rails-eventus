@@ -2,8 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+ 
+::-webkit-scrollbar-track:horizontal {
+    -webkit-box-shadow: inset 0 0 6px #55C5FF; 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #00BFFF; 
+    -webkit-box-shadow: inset 0 0 10px #00BFFF; 
+}
+::-webkit-scrollbar-thumb:vertical {
+    background: #555555; 
+    -webkit-box-shadow: inset 0 0 10px #555555; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: #00BEEE; 
+}
+
+
+
 #slide-panel-content{
-	height: 140px;
+	height: 200px;
+
 }
 
 .event-panel-user-photo{
@@ -18,15 +46,19 @@
 
 .event-panel{
 	width:250px;
-	top: 40px;
+	top: 0px;
 	left: 20px;
 	position: absolute;
+  margin: 0px 5px;
+  height:180px;
 }
 
 .container-outer {
-	overflow: scroll;
+	overflow-x: scroll;
+  overflow-y: hidden;
 	width: 100%;
 	height: auto;
+
 }
 
 .container-inner {

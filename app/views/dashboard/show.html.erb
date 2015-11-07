@@ -3,8 +3,9 @@
 <%= stylesheet_link_tag    'dashboard', media: 'all', 'data-turbolinks-track' => true %>
 <div class="row">
 	<h3>Upcoming Events Quickview</h3>
+
 	<div id="slide-panel" class="col-md-12 container-outer">
-		<hr />
+		
 			<div id="slide-panel-content" class="container-inner">
 
 					<% @events.each do |e| %>
@@ -17,7 +18,7 @@
 					<% end %>
 
 			</div>
-		<hr />
+		
 	</div>
 
 </div>
