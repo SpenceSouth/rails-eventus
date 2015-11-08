@@ -14,11 +14,13 @@
 ActiveRecord::Schema.define(version: 20151006172950) do
 
   create_table "equipment", force: :cascade do |t|
-    t.string   "name",        limit: 30
-    t.text     "description", limit: 200
-    t.integer  "event_id"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
+    t.string   "name",         limit: 30
+    t.text     "description",  limit: 200
+    t.boolean  "allowFood"
+    t.boolean  "hasProjector"
+    t.integer  "capacity"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "events", force: :cascade do |t|
@@ -48,10 +50,11 @@ ActiveRecord::Schema.define(version: 20151006172950) do
   create_table "rooms", force: :cascade do |t|
     t.string   "name",         limit: 30
     t.text     "description",  limit: 200
-    t.integer  "event_id"
-    t.integer  "maximum_size",             default: 50
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.boolean  "allowFood"
+    t.boolean  "hasProjector"
+    t.integer  "capacity"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "settings", force: :cascade do |t|
