@@ -75,67 +75,103 @@
       </div>
       <div class="modal-body">
 				<div class="row">
-				  <div class="col-md-6 col-md-offset-3">
+				  <div class="col-md-10 col-md-offset-1">
 
-						<form>
-							<div class="modal-label">
-						  Room name:
-						  	<input type="text" name="roomname"/>
+						<form class="form-horizontal">
+							<div class="modal-label form-group">
+						  		<label for="exampleInputName2" class="col-sm-4 control-label">Room name:</label>
+						  		<div class="col-sm-8">
+						  			<input type="text" name="roomname" placeholder="Room Name"/>
+						  		</div>
+						  	</div>
+
+							<div class="modal-label form-group">
+								<label for="exampleInputName2" class="col-sm-4 control-label">Room number:</label>
+								<div class="col-sm-8">		
+						  			<input type="text" name="roomnumber" placeholder="Room Number"/>
+						  		</div>
+						  	</div>
+
+							<div class="modal-label form-group">
+								<label for="exampleInputName2" class="col-sm-4 control-label"> 
+										Start Time:
+								</label>
+								<div class="col-sm-8">
+							  		<input type="time" name="starttime"/>
+							  	</div>
+							</div>
+							<div class="modal-label form-group">
+							  	<label for="exampleInputName2" class="col-sm-4 control-label"> 
+										To:
+								</label>
+							  	<div class="col-sm-8">
+							  		<input type="time" name="endtime"/>
+						  		</div>
 						  </div>
 
-							<div class="modal-label">
-						  Room number:
-						  	<input type="text" name="roomname"/>
-						  </div>
-
-							<div class="modal-label">
-								<span class="modal-time">
-						  		Time Available:
-							  	<input type="time" name="starttime"/>
-							  	<input type="time" name="endtime"/>
-								</span>
-						  </div>
-
-							<div class="modal-label">
-						  Days:
-						  	<input type="checkbox" name="day" value="S"> S </input>
-						  	<input type="checkbox" name="day" value="M"> M </input>
-						  	<input type="checkbox" name="day" value="T"> T </input>
-						  	<input type="checkbox" name="day" value="W"> W </input>
-						  	<input type="checkbox" name="day" value="R"> R </input>
-						  	<input type="checkbox" name="day" value="F"> F </input>
-						  	<input type="checkbox" name="day" value="S"> S </input>
-						  </div>
-
-							<div class="modal-label">
-							Description:
+							<div class="modal-label form-group">
+						  		<label for="exampleInputName2" class="col-sm-4 control-label" >
+						  			Days:
+						  		</label>
+						  		<div class="col-sm-8">
+								  	<input type="checkbox" name="day" value="S"> S </input>
+								  	<input type="checkbox" name="day" value="M"> M </input>
+								  	<input type="checkbox" name="day" value="T"> T </input>
+								  	<input type="checkbox" name="day" value="W"> W </input>
+								  	<input type="checkbox" name="day" value="R"> R </input>
+								  	<input type="checkbox" name="day" value="F"> F </input>
+								  	<input type="checkbox" name="day" value="S"> S </input>
+								</div>
+							</div>
+							<div class="modal-label form-group">
+								<label for="exampleInputName2" class="col-sm-4 control-label">
+									Description:
+								</label>
+								<div class="col-sm-8">
 									<textarea class="modal-description"></textarea>
+								</div>
 							</div>
 
-							<div class="modal-label">
-							Category:
-								<select>
-								  <option value="club">Club</option>
-								  <option value="faculty">Faculty</option>
-								  <option value="class">Class</option>
-								  <option value="study">Study</option>
-								  <option value="other">Other</option>
-								</select>
+							<div class="modal-label form-group">
+								<label for="exampleInputName2" class="col-sm-4 control-label">
+									Category:
+								</label>
+								<div class="col-sm-8">
+									<select>
+									  <option value="club">Club</option>
+									  <option value="faculty">Faculty</option>
+									  <option value="class">Class</option>
+									  <option value="study">Study</option>
+									  <option value="other">Other</option>
+									</select>
+								</div>
 							</div>
 
-							<div class="modal-label">
-							Allow food:
-								<input type="checkbox" name="food" value="food"></input>
+							<div class="modal-label form-group">
+								<label for="exampleInputName2" class="col-sm-4 control-label">
+									Allow food:
+								</label>
+								<div class="col-sm-8">
+									<input type="checkbox" name="food" value="food"></input>
+								</div>
 							</div>
 
-							<div class="modal-label">
-							Has Projector:
-								<input type="checkbox" name="projector" value="projector"></input>
+							<div class="modal-label form-group">
+								<label for="exampleInputName2" class="col-sm-4 control-label">
+									Has Projector:
+								</label>
+								<div class="col-sm-4">
+										<input type="checkbox" name="projector" value="projector"></input>
+								</div>
 							</div>
 
-							<div class="modal-label">
-							Capacity:
-						  	<input type="text" name="capacity"/>
+							<div class="modal-label form-group">
+								<label for="exampleInputName2" class="col-sm-4 control-label">
+									Capacity:
+								</label>
+								<div class="col-sm-8">
+								  	<input type="text" name="capacity"/>
+								</div>
 							</div>
 
 						</form>
