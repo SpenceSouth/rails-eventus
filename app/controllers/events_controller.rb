@@ -10,4 +10,17 @@ class EventsController < ApplicationController
   def add
     render :layout => false
   end
+
+  def index
+    @events = Event.all
+  end
+
+  def new
+    @events = Event.new
+  end
+
+  def create
+    @events = Event.new
+  end
+
 end
