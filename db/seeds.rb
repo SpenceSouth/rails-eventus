@@ -31,6 +31,7 @@
 	#Create events that are pending approval
 	Event.create(name: "Request for room 3", user_id: 2, room_id: 3)
 	Event.create(name: "Request for room 3", user_id: 3, room_id: 3)
+  Event.create(name: "1506: Pre-law meeting", user_id: 3, room_id: 3, start_time: '2015-11-25T12:00', end_time: '2015-11-25T13:00' )
 
 	#Create rentals not pending approval
 	Rental.create(name: "Request to rent Computer 1", user_id: 1, equipment_id: 1, pending_approval: false)
