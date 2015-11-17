@@ -49,7 +49,9 @@ ActiveRecord::Schema.define(version: 20151006172950) do
 
   create_table "rooms", force: :cascade do |t|
     t.string   "name",         limit: 30
+    t.integer  "number"
     t.text     "description",  limit: 200
+    t.string   "category"
     t.boolean  "allowFood"
     t.boolean  "hasProjector"
     t.integer  "capacity"

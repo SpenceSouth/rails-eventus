@@ -65,7 +65,7 @@
 
 
 
-<!-- Modal -->
+<!-- Add Room Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -76,21 +76,21 @@
       <div class="modal-body">
 				<div class="row">
 				  <div class="col-md-10 col-md-offset-1">
+            <%= form_for @newRoom, url: {action: "newRoom"} do |f| %>
+              <div class="modal-label form-group">
+                  <label for="exampleInputName2" class="col-sm-4 control-label">Room name:</label>
+                  <div class="col-sm-8">
+                    <%= f.text_field :name %>
+                  </div>
+                </div>
 
-						<form class="form-horizontal">
-							<div class="modal-label form-group">
-						  		<label for="exampleInputName2" class="col-sm-4 control-label">Room name:</label>
-						  		<div class="col-sm-8">
-						  			<input type="text" name="roomname" placeholder="Room Name"/>
-						  		</div>
-						  	</div>
 
 							<div class="modal-label form-group">
 								<label for="exampleInputName2" class="col-sm-4 control-label">Room number:</label>
-								<div class="col-sm-8">		
-						  			<input type="text" name="roomnumber" placeholder="Room Number"/>
-						  		</div>
+								<div class="col-sm-8">
+                  <%= f.text_field :number %>
 						  	</div>
+						  </div>
 
 							
 							<div class="modal-label form-group">
@@ -98,8 +98,8 @@
 									Description:
 								</label>
 								<div class="col-sm-8">
-									<textarea class="modal-description"></textarea>
-								</div>
+                  <%= f.text_area :description %>
+                </div>
 							</div>
 
 							<div class="modal-label form-group">
@@ -107,13 +107,8 @@
 									Category:
 								</label>
 								<div class="col-sm-8">
-									<select>
-									  <option value="club">Club</option>
-									  <option value="faculty">Faculty</option>
-									  <option value="class">Class</option>
-									  <option value="study">Study</option>
-									  <option value="other">Other</option>
-									</select>
+									<%= select_tag(:category, options_for_select([['',0],['Club', 1],['Faculty', 2],["Class", 3],["Study", 4], ["Other", 5]],0)) %>
+                  
 								</div>
 							</div>
 
@@ -122,7 +117,8 @@
 									Allow food:
 								</label>
 								<div class="col-sm-8">
-									<input type="checkbox" name="food" value="food"></input>
+									<%= f.check_box :allowFood %>
+                  
 								</div>
 							</div>
 
@@ -131,7 +127,7 @@
 									Has Projector:
 								</label>
 								<div class="col-sm-4">
-										<input type="checkbox" name="projector" value="projector"></input>
+                    <%= f.check_box :hasProjector %>
 								</div>
 							</div>
 
@@ -140,12 +136,11 @@
 									Capacity:
 								</label>
 								<div class="col-sm-8">
-								  	<input type="text" name="capacity"/>
+                  <%= f.text_field :capacity %>
 								</div>
 							</div>
-
-						</form>
-
+              <%= f.submit "Create" %>
+            <% end %> <!-- end form -->
 				  </div>
 				</div>
       </div>
