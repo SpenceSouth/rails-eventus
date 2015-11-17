@@ -74,18 +74,16 @@
         <h4 class="modal-title" id="myModalLabel">Add Room</h4>
       </div>
       <div class="modal-body">
-				<div class="row">
-				  <div class="col-md-10 col-md-offset-1">
-            <%= form_for @newRoom, url: {action: "newRoom"} do |f| %>
-              <div class="modal-label form-group">
+				<%= form_for @newRoom, url: {action: "newRoom"} do |f| %>
+              <div class="modal-label row">
                   <label for="exampleInputName2" class="col-sm-4 control-label">Room name:</label>
                   <div class="col-sm-8">
                     <%= f.text_field :name %>
                   </div>
-                </div>
+              </div>
 
 
-							<div class="modal-label form-group">
+							<div class="modal-label row">
 								<label for="exampleInputName2" class="col-sm-4 control-label">Room number:</label>
 								<div class="col-sm-8">
                   <%= f.text_field :number %>
@@ -93,7 +91,7 @@
 						  </div>
 
 							
-							<div class="modal-label form-group">
+							<div class="modal-label row">
 								<label for="exampleInputName2" class="col-sm-4 control-label">
 									Description:
 								</label>
@@ -102,7 +100,7 @@
                 </div>
 							</div>
 
-							<div class="modal-label form-group">
+							<div class="modal-label row">
 								<label for="exampleInputName2" class="col-sm-4 control-label">
 									Category:
 								</label>
@@ -112,7 +110,7 @@
 								</div>
 							</div>
 
-							<div class="modal-label form-group">
+							<div class="modal-label row">
 								<label for="exampleInputName2" class="col-sm-4 control-label">
 									Allow food:
 								</label>
@@ -122,7 +120,7 @@
 								</div>
 							</div>
 
-							<div class="modal-label form-group">
+							<div class="modal-label row">
 								<label for="exampleInputName2" class="col-sm-4 control-label">
 									Has Projector:
 								</label>
@@ -131,7 +129,7 @@
 								</div>
 							</div>
 
-							<div class="modal-label form-group">
+							<div class="modal-label row">
 								<label for="exampleInputName2" class="col-sm-4 control-label">
 									Capacity:
 								</label>
@@ -139,10 +137,13 @@
                   <%= f.text_field :capacity %>
 								</div>
 							</div>
-              <%= f.submit "Create" %>
+              <div class="modal-label row">
+                  <div class="col-sm-4"></div>
+                  <div class="col-sm-8">
+                    <%= f.submit "Create" %>
+                  </div>
+              </div>
             <% end %> <!-- end form -->
-				  </div>
-				</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
