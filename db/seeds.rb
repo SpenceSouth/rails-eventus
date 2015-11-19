@@ -27,16 +27,12 @@
 	Equipment.create(name: "Computer: Dell Laptop 1")
 	Equipment.create(name: "Computer: Dell Laptop 2")
 	Equipment.create(name: "Computer: Dell Laptop 3")
-	Equipment.create(name: "Computer: Dell Laptop 4")
 	Equipment.create(name: "Cart 1")
 	Equipment.create(name: "Cart 2")
-	Equipment.create(name: "Cart 3")
-	Equipment.create(name: "Cart 4")
 	Equipment.create(name: "Bose Speakers 1")
 	Equipment.create(name: "Bose Speakers 2")
 	Equipment.create(name: "Microphone 1")
 	Equipment.create(name: "Microphone 2")
-	Equipment.create(name: "Microphone 3")
 	Equipment.create(name: "Computer: Apple Macbook 1")
 
 	#Create events not pending approval
