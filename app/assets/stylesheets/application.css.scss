@@ -137,6 +137,9 @@
     .custom-list-column{
       background-color: #555555;
       height: 100vh;
+      overflow-y: scroll;
+
+      overflow-x: hidden;
 
 
       a,a:hover,a:visited{
