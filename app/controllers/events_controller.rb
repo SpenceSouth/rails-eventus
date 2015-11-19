@@ -8,6 +8,7 @@ class EventsController < ApplicationController
   	@events = Event.all.where("room_id = ? AND pending_approval = ?", params[:id], false)
   	@pendingEvents = Event.all.where("room_id = ? AND pending_approval = ?", params[:id], true)
     @newRoom = Room.new
+    @newEvent = Event.new
   end
 
   def add
@@ -22,13 +23,23 @@ class EventsController < ApplicationController
   def newRoom
     @newRoom = Room.new(roomParams)
     if @newRoom.save
-      flash[:room_created] = @newRoom.name
-      
-      @users = User.all
-      id = @newRoom.id
       redirect_to "/events/show/" + id.to_s
+      
     else 
 
+      redirect_to "/dashboard/show"
+    end
+  end
+  
+  def newEvent
+    @newEvent = Event.new(eventParams)
+    if @newEvent.save
+      flash[:event_create] = @newEvent.name
+
+      @users = User.all
+      id = @newEvent.id
+      redirect_to "/events/show/" + 1.to_s
+    else
       @users = User.all
       redirect_to "/dashboard/show"
     end
@@ -38,15 +49,14 @@ class EventsController < ApplicationController
     
   end
 
-  def newEvent
-
-
-  end
 
   def create
     @events = Event.new
   end
   def roomParams
-    params.require(:room).permit(:name,:number,:description,:category,:allowFood,:hasProjector,:capacity);
+    params.require(:room).permit(:name,:number,:description,:category,:allowFood,:hasProjector,:capacity)
+  end
+  def eventParams
+    params.require(:event).permit(:name,:roomNumber,:description,:date,:start_time,:end_time,:food,:projector,:capacity,:user_id,:room_id,:pending_approval)
   end
 end

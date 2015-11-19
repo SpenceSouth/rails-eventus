@@ -24,12 +24,17 @@ ActiveRecord::Schema.define(version: 20151006172950) do
   end
 
   create_table "events", force: :cascade do |t|
+    t.string   "name",                                        null: false
+    t.string   "roomNumber"
+    t.text     "description",      limit: 200
+    t.date     "date"
     t.datetime "start_time"
     t.datetime "end_time"
-    t.string   "name",                                        null: false
+    t.boolean  "food"
+    t.boolean  "projector"
+    t.boolean  "capacity"
     t.integer  "user_id"
-    t.text     "description",      limit: 200
-    t.integer  "room_id",                                     null: false
+    t.integer  "room_id"
     t.boolean  "pending_approval",             default: true
     t.datetime "created_at",                                  null: false
     t.datetime "updated_at",                                  null: false
