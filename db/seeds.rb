@@ -24,9 +24,20 @@
 	Room.create(name: "Room 1012",capacity: 25, description: "A very small study space that is popularly referenced in the Harry Potter series as the place Harry used to sleep in under the staircase")
 
 	#Create the Equipment
-	Equipment.create(name: "Computer 1")
+	Equipment.create(name: "Computer: Dell Laptop 1")
+	Equipment.create(name: "Computer: Dell Laptop 2")
+	Equipment.create(name: "Computer: Dell Laptop 3")
+	Equipment.create(name: "Computer: Dell Laptop 4")
 	Equipment.create(name: "Cart 1")
-	Equipment.create(name: "Computer 2")
+	Equipment.create(name: "Cart 2")
+	Equipment.create(name: "Cart 3")
+	Equipment.create(name: "Cart 4")
+	Equipment.create(name: "Bose Speakers 1")
+	Equipment.create(name: "Bose Speakers 2")
+	Equipment.create(name: "Microphone 1")
+	Equipment.create(name: "Microphone 2")
+	Equipment.create(name: "Microphone 3")
+	Equipment.create(name: "Computer: Apple Macbook 1")
 
 	#Create events not pending approval
 	Event.create(name: "Request for room 1", user_id: 1, room_id: 1,pending_approval: false)
@@ -38,11 +49,11 @@
   Event.create(name: "1506: Pre-law meeting", user_id: 3, room_id: 4, start_time: '2015-11-25T12:00', end_time: '2015-11-25T13:00', pending_approval: true )
   Event.create(name: "1011: Study Reservation Brian", user_id: 3, room_id: 5, start_time: '2015-11-19T15:00', end_time: '2015-11-19T16:00', pending_approval: true  )
   Event.create(name: "1011: Study Reservation Spence", user_id: 3, room_id: 5, start_time: '2015-11-19T16:30', end_time: '2015-11-19T18:00', pending_approval: true  )
-  Event.create(name: "1012: Study Reservation James", user_id: 3, room_id: 6, start_time: '2015-11-18T12:00', end_time: '2015-11-18T113:00', pending_approval: true  )
-  Event.create(name: "1506: Dean's Event", user_id: 3, room_id: 4, start_time: '2015-11-20T12:00', end_time: '2015-11-20T17:00', pending_approval: true  )
+  Event.create(name: "1012: Study Reservation James", user_id: 3, room_id: 6, start_time: '2015-11-18T12:00', end_time: '2015-11-18T113:00', pending_approval: false  )
+  Event.create(name: "1506: Dean's Event", user_id: 3, room_id: 4, start_time: '2015-11-20T12:00', end_time: '2015-11-20T17:00', pending_approval: false  )
   Event.create(name: "1503: Study Room Brian", user_id: 3, room_id: 6, start_time: '2015-11-20T12:00', end_time: '2015-11-20T14:00', pending_approval: true  )
-  Event.create(name: "1011: Breakfast Gala", user_id: 3, room_id: 5, start_time: '2015-11-20T9:00', end_time: '2015-11-20T11:00', pending_approval: true  )
-  Event.create(name: "1011: Breakfast Gala", user_id: 3, room_id: 5, start_time: '2015-11-19T9:00', end_time: '2015-11-19T11:00', pending_approval: true  )
+  Event.create(name: "1011: Breakfast Gala", user_id: 3, room_id: 5, start_time: '2015-11-20T9:00', end_time: '2015-11-20T11:00', pending_approval: false  )
+  Event.create(name: "1011: Breakfast Gala", user_id: 3, room_id: 5, start_time: '2015-11-19T9:00', end_time: '2015-11-19T11:00', pending_approval: false  )
 
 	#Create rentals not pending approval
 	Rental.create(name: "Request to rent Computer 1", user_id: 1, equipment_id: 1, pending_approval: false)

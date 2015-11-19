@@ -1,7 +1,7 @@
 class RequestsController < ApplicationController
   def show
-  	eventRequests = Event.all.where("pending_approval = ?", true)
-  	rentalRequests = Rental.all.where("pending_approval = ?", true)
+  	eventRequests = Event.all.where(pending_approval: true)
+  	rentalRequests = Rental.all.where(pending_approval: true)
   	@getSortedRequests = eventRequests + rentalRequests
   	@users = User.all
   end
