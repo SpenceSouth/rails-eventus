@@ -38,45 +38,34 @@
       </div>
       <div class="modal-body">
 				<div class="row">
-				  <div class="col-md-6 col-md-offset-3">
+				  <div class="col-md-10 col-md-offset-2">
 
-						<form>
-							<div class="modal-label">
-						  Equipment name:
-						  	<input type="text" name="equipment-name"/>
-						  </div>
+					<%= form_for @newEquipment, url: {action: "newEquipment"} do |f| %>
+            
+						<div class="modal-label row">
+						 	<label for="exampleInputName2" class="col-sm-4 control-label">Equipment name:</label>
+                			<div class="col-sm-8">
+                  				<%= f.text_field :name %>
+                			</div>
+						 </div>
 
-							<div class="modal-label">
-						  Tag number:
-						  	<input type="text" name="tag-number"/>
-						  </div>
+						<div class="modal-label row">
+						 	<label for="exampleInputName2" class="col-sm-4 control-label">Tag Number:</label>
+                			<div class="col-sm-8">
+                  				<%= f.text_field :tag_number %>
+                			</div>
+						 </div>
 
-							<div class="modal-label">
-								<span class="modal-time">
-						  		Time Available (if any):
-							  	<input type="time" name="starttime"/>
-							  	<input type="time" name="endtime"/>
-								</span>
-						  </div>
 
-							<div class="modal-label">
-						  Days:
-						  	<input type="checkbox" name="day" value="S"> S </input>
-						  	<input type="checkbox" name="day" value="M"> M </input>
-						  	<input type="checkbox" name="day" value="T"> T </input>
-						  	<input type="checkbox" name="day" value="W"> W </input>
-						  	<input type="checkbox" name="day" value="R"> R </input>
-						  	<input type="checkbox" name="day" value="F"> F </input>
-						  	<input type="checkbox" name="day" value="S"> S </input>
-						  </div>
-
-							<div class="modal-label">
-							Description:
-									<textarea class="modal-description"></textarea>
+							<div class="modal-label row">
+								<label for="exampleInputName2" class="col-sm-4 control-label">Decription:</label>
+								<div class="col-sm-8">
+									<%= f.text_area :description %>
+								</div>
 							</div>
 
-							<div class="modal-label">
-							Category:
+							<div class="modal-label row">
+								<label for="exampleInputName2" class="col-sm-4 control-label">Category: </label>
 								<select>
 								  <option value="club">Technology</option>
 								  <option value="faculty">Tools</option>
@@ -86,12 +75,21 @@
 								</select>
 							</div>
 
-							<div class="modal-label">
-							Value:
-						  	<input type="text" name="value"/>
+							<div class="modal-label row">
+								<label for="exampleInputName2" class="col-sm-4 control-label">Cost: </label>
+								<select>
+								  <option value="Low">Low</option>
+								  <option value="Medium">Medium</option>
+								  <option value="High">High</option>
+								</select>
 							</div>
-
-						</form>
+							<div class= "row">
+								<div class="col-sm-8"></div>
+								<div class="col-sm-4">
+									<%= f.submit %>
+								</div>
+							</div>
+						<% end %>
 
 				  </div>
 				</div>
