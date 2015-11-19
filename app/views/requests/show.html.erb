@@ -11,14 +11,16 @@
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
 		</div>
 		<ul id="requests-list" class="list-group custom-list-listing">
+            <% count = 0 %>
 			<% @getSortedRequests.each do |r| %>
-				 <%= link_to r.id.to_s do %>
+				 <%= link_to count.to_s do %>
 				<li class="list-group-item custom-list-item">
 					<% if r.instance_of? Event %>
 						<span class="glyphicon glyphicon-book"></span>
 					<% else %>
 						<span class="glyphicon glyphicon-wrench"></span>
 					<% end %>
+                    <% count += 1 %>
 					<%= r.name %>
 				</li>
 				<% end %>
@@ -26,10 +28,22 @@
 		</ul>
 	</div><!-- end second column listing -->
 
-	<!-- begin third column listing -->
-	<div id="event-colum" class="col-md-9">
+  <!-- begin third column listing -->
+  <div id="request-column" class="col-md-9">
+    <h2 id="room-title">Current Room: <%= @currentRequest.name %></h2>
 
-	</div>
+    <div>
+      <p>
+        Details of the reservation will be placed in this area.
+      </p>
+    </div>
+
+    <div>
+      <button class="btn btn-danger">Deny</button>
+      <button class="btn btn-primary">Approve</button>
+    </div>
+
+  </div>
 </div>
 
 
