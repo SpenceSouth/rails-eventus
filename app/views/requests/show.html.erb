@@ -31,22 +31,18 @@
   <!-- begin third column listing -->
   <div id="request-column" class="col-md-9">
     <h2 id="room-title">Current Room: <%= @currentRequest.name %></h2>
-    <div id="current-and-upcoming-events" class="panel panel-default">
-      <div class="panel-heading">
-        Current and Upcoming events
-      </div>
+
+    <div>
+      <p>
+        Details of the reservation will be placed in this area.
+      </p>
     </div>
 
-    <div id="add-event-fab" class="row">
-      <div class="col-md-9"></div>
-      <div class="col-md-3">
-        Request Event
-        <button type ="button" id="add-event-button" class="btn btn-default"  data-toggle="modal" data-target="#eventModal">
-          <span class="glyphicon glyphicon-plus"></span>
-        </button>
-      </div>
-
+    <div>
+      <button class="btn btn-danger">Deny</button>
+      <button class="btn btn-primary">Approve</button>
     </div>
+
   </div>
 </div>
 
