@@ -23,7 +23,8 @@ class EventsController < ApplicationController
   def newRoom
     @newRoom = Room.new(roomParams)
     if @newRoom.save
-      redirect_to "/events/show/" + id.to_s
+      index = @newRoom.id
+      redirect_to "/events/show/" + index.to_s
       
     else 
 
@@ -34,10 +35,6 @@ class EventsController < ApplicationController
   def newEvent
     @newEvent = Event.new(eventParams)
     if @newEvent.save
-      flash[:event_create] = @newEvent.name
-
-      @users = User.all
-      id = @newEvent.id
       redirect_to "/events/show/" + 1.to_s
     else
       @users = User.all

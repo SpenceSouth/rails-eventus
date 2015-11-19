@@ -8,10 +8,11 @@ class EquipmentController < ApplicationController
   def newEquipment
   	@newEqupiment = Equipment.new(equipmentParams)
   	if @newEqupiment.save
-  		redirect_to "/events/show/" + 1.to_s
+	  	index = @newEqupiment.id
+  		redirect_to "/equipment/show/" + index.to_s
       
   	else
-  		redirect_to "/dashboard/show/" + 1.to_s
+  		redirect_to "/dashboard/show"
       		
   	end
   end
