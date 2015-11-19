@@ -3,7 +3,9 @@ class RequestsController < ApplicationController
   	eventRequests = Event.all.where(pending_approval: true)
   	rentalRequests = Rental.all.where(pending_approval: true)
   	@getSortedRequests = eventRequests + rentalRequests
-  	@users = User.all
+    @currentRequest = @getSortedRequests[params[:id].to_i]
+    # @currentRequest = @getSortedRequests[params[:id].to_i]
+    @users = User.all
   end
 
   def getSortedRequests
