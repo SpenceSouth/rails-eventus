@@ -37,9 +37,11 @@ class EventsController < ApplicationController
     @newEvent = Event.new(eventParams)
     @newEvent.pending_approval = true;
     if @newEvent.save
+      flash[:notice] = "Event Request Successfully sent"
       redirect_to "/events/show/" + 1.to_s
     else
       @users = User.all
+      flash[:alert] = "Error: Failed to send event request. Please try again"
       redirect_to "/dashboard/show"
     end
   end
