@@ -10,7 +10,7 @@ class CreateEvents < ActiveRecord::Migration
       t.boolean "food"
       t.boolean "projector"
       t.boolean "capacity"
-
+      t.string "until"
       t.integer "user_id" 
       t.integer "room_id"
       t.boolean "pending_approval", :default => true

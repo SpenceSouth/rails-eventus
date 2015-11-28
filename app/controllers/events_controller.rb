@@ -34,6 +34,7 @@ class EventsController < ApplicationController
   
   def newEvent
     @newEvent = Event.new(eventParams)
+    @newEvent.pending_approval = true;
     if @newEvent.save
       redirect_to "/events/show/" + 1.to_s
     else
