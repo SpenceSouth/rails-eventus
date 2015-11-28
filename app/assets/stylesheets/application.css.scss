@@ -15,6 +15,28 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+.notice{
+  width: 200px;
+  height: 75px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color:#00BFFF;
+  padding: 20px;
+  -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.alert{
+  width: 200px;
+  height: 75px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color:red;
+  padding: 20px;
+  -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
 
  body{
       background-color: #333333;

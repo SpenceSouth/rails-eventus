@@ -9,9 +9,13 @@ class EquipmentController < ApplicationController
   	@newEqupiment = Equipment.new(equipmentParams)
   	if @newEqupiment.save
 	  	index = @newEqupiment.id
-  		redirect_to "/equipment/show/" + index.to_s
+  		flash[:notice] = "Equipment created Successfully"
+      
+      redirect_to "/equipment/show/" + index.to_s
       
   	else
+      flash[:alert] = "Error: failed to add equipment. Please Try again"
+      
   		redirect_to "/dashboard/show"
       		
   	end

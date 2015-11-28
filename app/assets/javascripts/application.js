@@ -15,3 +15,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery-ui
+
+
+$(document).ready(function(){
+
+	$(".notice").delay(3000).fadeOut("slow");
+	$(".alert").delay(3000).fadeOut("slow");
+	
+});

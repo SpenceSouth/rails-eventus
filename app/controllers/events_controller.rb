@@ -24,10 +24,11 @@ class EventsController < ApplicationController
     @newRoom = Room.new(roomParams)
     if @newRoom.save
       index = @newRoom.id
+      flash[:notice] = "Room created Successfully"
       redirect_to "/events/show/" + index.to_s
       
     else 
-
+      flash[:alert] = "Error:  Room could not be created. Please try again."
       redirect_to "/dashboard/show"
     end
   end
