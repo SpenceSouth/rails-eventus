@@ -25,6 +25,25 @@
 	<!-- begin third column listing -->
 	<div id="rental-colum" class="col-md-9">
 		<h2>Current Equipment: <%= @currentEquipment.name %></h2>
+
+		<div id ="tag-number" class="">
+			<span class="descriptor">Tag Number: </span>
+			<%= @currentEquipment.tag_number %>
+		</div>
+
+		<div id ="equipment-description">
+			<span class="descriptor">Description: </span>
+			<%= @currentEquipment.description %>
+		</div>
+		<div id ="equipment-category">
+			<span class="descriptor">Category: </span>
+			<%= @currentEquipment.category %>
+		</div>
+		<div id ="equipment-cost">
+			<span class="descriptor">Cost: </span>
+			<%= @currentEquipment.cost %>
+		</div>
+		
 	</div>
 </div>
 

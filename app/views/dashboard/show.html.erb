@@ -10,9 +10,11 @@
 
 					<% @events.each do |e| %>
 						<div class="panel panel-default event-panel">
-							<div class="panel-heading">Event - <%= e.name %></div>
+							<div class="panel-heading"><h3>Event - <%= e.name %><h3></div>
 							<div class="panel-body">
-								<div class="event-panel-user-photo"></div>
+								<div class="event-panel-user-photo"><%= image_tag("profile.jpg", :class=> "img-circle event-image") %>  </div>
+                  <% id = e.user_id %>
+                  <h4 class="display_user"><%= @users.find(id).first_name %> <%= @users.find(id).last_name %></h4>
 							</div>
 						</div>
 					<% end %>

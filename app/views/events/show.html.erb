@@ -25,24 +25,35 @@
 	<!-- begin third column listing -->
 	<div id="event-column" class="col-md-9">
 		<h2 id="room-title">Current Room: <%= @currentRoom.name %></h2>
-		<div id ="room-description">
+		
+    <div id ="room-description">
 			<span class="descriptor">Description: </span>
 			<%= @currentRoom.description %>
 		</div>
-		<div id="room-size">
+		
+    <div id="room-size">
 			<span class="descriptor">Maximum Size: </span>
 				<%= @currentRoom.capacity %>
 		</div>
-		<div id="current-and-upcoming-events" class="panel panel-default">
+		
+    <div id="current-and-upcoming-events" class="panel panel-default">
 			<div class="panel-heading">
 				Current and Upcoming events
 			</div>
 			<ul class="list-group">
 				<% @events.each do |e| %>
 					<li class="list-group-item">
-						<img class="img-circle event-image"></img>
-						<%= e.name %>
-					</li>
+            <div class="event-bar-item row">
+              <div class="col-sm-3">
+                <%= image_tag("profile.jpg", :class=> "img-circle event-image") %>					
+					     </div>
+               <div class="col-sm-9">
+                  <% id = e.user_id %>
+                  <h3><%= e.name %> - <%= @users.find(id).first_name %> <%= @users.find(id).last_name %></h3>
+
+                </div>
+             </div>
+          </li>
 				<% end %>
 			</ul>
 		</div>
