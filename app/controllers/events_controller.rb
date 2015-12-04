@@ -36,6 +36,7 @@ class EventsController < ApplicationController
   def newEvent
     @newEvent = Event.new(eventParams)
     @newEvent.pending_approval = true;
+    @newEvent.user_id = 0;
     if @newEvent.save
       flash[:notice] = "Event Request Successfully sent"
       redirect_to "/events/show/" + 1.to_s
