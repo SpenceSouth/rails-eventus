@@ -26,24 +26,55 @@
 	<div id="rental-colum" class="col-md-9">
 		<h2>Current Equipment: <%= @currentEquipment.name %></h2>
 
-		<div id ="tag-number" class="">
+		<div id ="tag-number" class="equipment-description">
 			<span class="descriptor">Tag Number: </span>
 			<%= @currentEquipment.tag_number %>
 		</div>
 
-		<div id ="equipment-description">
+		<div id ="equipment-description" class="equipment-description">
 			<span class="descriptor">Description: </span>
-			<%= @currentEquipment.description %>
+			<span class="data-item"><%= @currentEquipment.description %></span>
 		</div>
-		<div id ="equipment-category">
+		<div id ="equipment-category" class="equipment-description">
 			<span class="descriptor">Category: </span>
-			<%= @currentEquipment.category %>
+			<span class="data-item"><%= @currentEquipment.category %></span>
 		</div>
-		<div id ="equipment-cost">
+		<div id ="equipment-cost" class="equipment-description">
 			<span class="descriptor">Cost: </span>
-			<%= @currentEquipment.cost %>
+			<span class="data-item"><%= @currentEquipment.cost %></span>
 		</div>
 		
+		<div id="current-and-upcoming-rentals" class="panel panel-default">
+			<div class="panel-heading">
+				Current and Upcoming events
+			</div>
+			<ul class="list-group">
+				<% @rentals.each do |r| %>
+					<li class="list-group-item">
+            <div class="event-bar-item row">
+              <div class="col-sm-3">
+                <%= image_tag("profile.jpg", :class=> "img-circle event-image") %>					
+					     </div>
+               <div class="col-sm-9">
+                  <% id = r.user_id %>
+                  <h3><%= r.name %> - <%= @users.find(id).first_name %> <%= @users.find(id).last_name %></h3>
+
+                </div>
+             </div>
+          </li>
+				<% end %>
+			</ul>
+		</div>
+		<div id="add-event-fab" class="row">
+			<div class="col-md-9"></div>
+			<div class="col-md-3">
+				
+				<button type ="button" id="add-rental-button" class="btn btn-default"  data-toggle="modal" data-target="#rentalModal">
+					Request Rental</span>
+				</button>
+			</div>
+			
+		</div>
 	</div>
 </div>
 
@@ -116,6 +147,117 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 				<!-- Remove data-dismiss="model" to actually save -->
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Request Event</h4>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+
+            <!--<%= render("form") %>-->
+
+            <%= form_for @newRental, url: {action: "newRental"} do |f| %>
+              <div class="modal-label row">
+                <label for="exampleInputName2" class="col-sm-4 control-label">Rental name:</label>
+                <div class="col-sm-8">
+                  <%= f.text_field :name %>
+                </div>
+              </div>
+
+               <div class="modal-label row">
+                <label for="exampleInputName2" class="col-sm-4 control-label">Room number:</label>
+                <div class="col-sm-8">
+                  <%= select_tag :number, options_from_collection_for_select(@equipment,"id","name") %>
+                </div>
+              </div>
+
+               <div class="modal-label row">
+                <label for="exampleInputName2" class="col-sm-4 control-label">
+						  		Rental start time:
+                </label>
+                <div class="col-sm-8">
+                  <%= f.text_field :start_time, type: "time" %>
+                </div>
+              </div>
+
+               <div class="modal-label row">
+                <label for="exampleInputName2" class="col-sm-4 control-label">
+						  		Rental end time:
+                </label>
+                <div class="col-sm-8">
+                  <%= f.text_field :end_time, type: "time" %>
+                </div>
+              </div>
+
+             <div class="modal-label row">
+                <label for="exampleInputName2" class="col-sm-4 control-label">
+                  Description:
+                </label>
+                <div class="col-sm-8">
+                  <%= f.text_area :description %>
+                </div>
+              </div>
+
+              <div class="modal-label row">
+                <label for="exampleInputName2" class="col-sm-4 control-label">
+                  Rental date:
+                </label>
+                <div class="col-sm-8">
+                  <%= f.text_field :date, type: "date" %>
+                </div>
+              </div>
+
+              <div class="modal-label row">
+                <label for="exampleInputName2" class="col-sm-4 control-label">
+                    Repeat on days:
+                </label>
+                <div class="col-sm-8">
+
+
+                    <input type="checkbox" name="day" value="S"> S </input>
+                    <input type="checkbox" name="day" value="M"> M </input>
+                    <input type="checkbox" name="day" value="T"> T </input>
+                    <input type="checkbox" name="day" value="W"> W </input>
+                    <input type="checkbox" name="day" value="R"> R </input>
+                    <input type="checkbox" name="day" value="F"> F </input>
+                    <input type="checkbox" name="day" value="S"> S </input>
+                </div>
+              </div>
+
+              <div class="modal-label row">
+                <label for="exampleInputName2" class="col-sm-4 control-label">
+                  Repeat until:
+                </label>
+                <div class="col-sm-8">
+                    <%= f.text_field :until, type: "date" %>
+                </div>
+              </div>
+
+              <div class="modal-label row">
+                <div class="col-sm-4"></div>
+                <div class="col-sm-8">
+                  <%= f.submit  "Create" %>
+                </div>
+              </div>
+            <% end %>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- Remove data-dismiss="model" to actually save -->
         <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
       </div>
     </div>

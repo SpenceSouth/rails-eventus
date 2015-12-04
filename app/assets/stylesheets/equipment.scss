@@ -1,0 +1,39 @@
+// Place all the styles related to the Equipment controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.equipment-description{
+	margin: 20px 10px;
+}
+#current-and-upcoming-rentals{
+	border: 1px solid #222222;
+
+	margin-top: 10px;
+	.panel-heading{
+		background-color: #00BFFF;
+		font-size: 18px;
+
+	}
+	.panel-body{
+		border-width: 0px;
+	}
+	.list-group-item:first{
+		border-top: 0px;
+	}
+	.list-group-item{
+		background-color: #777777;
+	}
+	.event-image{
+		height: 65px;
+		width: 65px;
+		background-color: #555555;
+		margin: 5px;
+		border: 1px solid #00BFFF;
+	}
+}
+#add-rental-button{
+	display:inline;
+	background-color: #00BFFF;
+	border-width: 0px;	
+	
+}

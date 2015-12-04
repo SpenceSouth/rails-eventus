@@ -31,7 +31,7 @@
   <!-- begin third column listing -->
   <div id="request-column" class="col-md-9">
     <h2 id="room-title">Current Room: <%= @currentRequest.name %></h2>
-
+    
     <div>
       <p>
         Details of the reservation will be placed in this area.
@@ -155,20 +155,23 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Deny Request</h4>
       </div>
+      <%= form_for @replyMessage, url: {action: "denyRequest"} do |f| %>
       <div class="modal-body">
 				<div class="row">
 				  <div class="col-md-10 col-md-offset-1">
-				  	Send a Reply email <input type="checkbox"> </input>
-				  	<input type="text"></input>
-					
+				  		<span>To:</span>
+				  		<%= f.text_field :replyEmail, :class => "email-address", type: "email"%>
+						<span>Message:</span>
+						<%= f.text_area :replyMessage, :class => "email-reply" %>
 				  </div>
 				</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<!-- Remove data-dismiss="model" to actually save -->
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
-      </div>
+		<%= f.submit "Send Email", :class => "btn btn-primary"%>
+	 </div>
+	 <% end %>
+
     </div>
   </div>
 </div>
@@ -182,18 +185,23 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Approve Request</h4>
       </div>
+      <%= form_for @replyMessage, url: {action: "acceptRequest"} do |f| %>
+      
       <div class="modal-body">
 				<div class="row">
 				  <div class="col-md-10 col-md-offset-1">
-				  	
+				  	<span>To:</span>
+				  		<%= f.text_field :replyEmail, :class => "email-address", type: "email"%>
+						<span>Message:</span>
+						<%= f.text_area :replyMessage, :class => "email-reply" %> 
 				  </div>
 				</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<!-- Remove data-dismiss="model" to actually save -->
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
-      </div>
+		<%= f.submit "Send Email", :class => "btn btn-primary"%>
+	 </div>
+	 <% end %>
     </div>
   </div>
 </div>

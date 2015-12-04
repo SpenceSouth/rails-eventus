@@ -24,16 +24,16 @@
 	Room.create(name: "Room 1012",capacity: 25, description: "A very small study space that is popularly referenced in the Harry Potter series as the place Harry used to sleep in under the staircase")
 
 	#Create the Equipment
-	Equipment.create(name: "Computer: Dell Laptop 1")
-	Equipment.create(name: "Computer: Dell Laptop 2")
-	Equipment.create(name: "Computer: Dell Laptop 3")
-	Equipment.create(name: "Cart 1")
-	Equipment.create(name: "Cart 2")
-	Equipment.create(name: "Bose Speakers 1")
-	Equipment.create(name: "Bose Speakers 2")
-	Equipment.create(name: "Microphone 1")
-	Equipment.create(name: "Microphone 2")
-	Equipment.create(name: "Computer: Apple Macbook 1")
+	Equipment.create(name: "Computer: Dell Laptop 1", tag_number: "d24tct", category: "Technology", cost: "$550")
+	Equipment.create(name: "Computer: Dell Laptop 2", tag_number: "tei9k39", category: "Technology", cost: "$550")
+	Equipment.create(name: "Computer: Dell Laptop 3",tag_number: "e39d93k", category: "Technology", cost: "$550")
+	Equipment.create(name: "Cart 1", tag_number: "tet2r9d8", category: "Other", cost: "$75")
+	Equipment.create(name: "Cart 2", tag_number: "ed234dj", category: "Other", cost: "$75")
+	Equipment.create(name: "Bose Speakers 1", tag_number: "eu34us34", category: "Technology", cost: "$45")
+	Equipment.create(name: "Bose Speakers 2",tag_number: "er4592jd", category: "Technology", cost: "$45")
+	Equipment.create(name: "Microphone 1", tag_number: "re123it", category: "Technology", cost: "$35")
+	Equipment.create(name: "Microphone 2",tag_number: "de12ki12", category: "Technology", cost: "$35")
+	Equipment.create(name: "Computer: Apple Macbook 1", tag_number: "er12it23", category: "Technology", cost: "$750")
 
 	#Create events not pending approval
 	Event.create(name: "Request for room 1", user_id: 1, room_id: 1,pending_approval: false)

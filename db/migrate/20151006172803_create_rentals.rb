@@ -9,7 +9,8 @@ class CreateRentals < ActiveRecord::Migration
     	t.text "description", :limit => 200
     	t.integer "equipment_id", :null => false
       t.boolean "pending_approval", :default => true
-      
+      t.string "until"
+      t.date "date"
       t.timestamps null: false
     end
   end
