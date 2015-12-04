@@ -133,21 +133,17 @@
 								  <option value="High">High</option>
 								</select>
 							</div>
-							<div class= "row">
-								<div class="col-sm-8"></div>
-								<div class="col-sm-4">
-									<%= f.submit %>
-								</div>
-							</div>
+
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <!-- Remove data-dismiss="model" to actually save -->
+                          <%= f.submit  'Save Changes', :class => 'btn btn-primary' %>\
+                        </div>
 						<% end %>
 
 				  </div>
 				</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<!-- Remove data-dismiss="model" to actually save -->
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
       </div>
     </div>
   </div>
